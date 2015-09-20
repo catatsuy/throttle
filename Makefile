@@ -1,2 +1,2 @@
 all:
-	go build -o throttle main.go
+	go build -o throttle throttle.go
