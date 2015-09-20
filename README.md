@@ -8,10 +8,8 @@ throttle [-interval=1000ms]
 
 ## Test
 
-depends on zsh.
-
 ```
-./test.sh | ./throttle -interval 1000ms
+./output | ./throttle -interval 1000ms
 ```
 
 ## LICENSE
