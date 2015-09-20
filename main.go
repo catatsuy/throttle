@@ -37,11 +37,15 @@ func main() {
 	go func() {
 		for {
 			<-interval
-			w.Flush()
+			if err := w.Flush(); err != nil {
+				panic(err.Error())
+			}
 		}
 	}()
 
 	<-c
 
-	w.Flush()
+	if err := w.Flush(); err != nil {
+		panic(err.Error())
+	}
 }
